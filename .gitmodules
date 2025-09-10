@@ -1,0 +1,4 @@
+[submodule "PX4-Autopilot-ADS"]
+	path = PX4-Autopilot-ADS
+	url = git@github.com:deepboliya/PX4-Autopilot-ADS.git
+	branch = main
