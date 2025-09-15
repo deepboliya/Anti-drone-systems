@@ -1,6 +1,7 @@
 # Prerequisites
 *.d
-
+# Ignore vscode config
+.vscode/
 # Compiled Object files
 *.slo
 *.lo
