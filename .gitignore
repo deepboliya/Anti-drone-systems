@@ -1,7 +1,14 @@
 # Prerequisites
 *.d
+
 # Ignore vscode config
 .vscode/
+
+# Ignore ros2 artifacts
+build/
+install/
+log/
+
 # Compiled Object files
 *.slo
 *.lo
