@@ -2,3 +2,9 @@
 	path = PX4-Autopilot-ADS
 	url = git@github.com:deepboliya/PX4-Autopilot-ADS.git
 	branch = main
+[submodule "ros2_uorb_interface/src/px4_msgs"]
+	path = ros2_uorb_interface/src/px4_msgs
+	url = https://github.com/PX4/px4_msgs.git
+[submodule "ros2_uorb_interface/src/px4_ros_com"]
+	path = ros2_uorb_interface/src/px4_ros_com
+	url = https://github.com/PX4/px4_ros_com.git
