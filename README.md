@@ -20,6 +20,7 @@ git checkout main
   ```bash
   sudo snap install micro-xrce-dds-agent
   ```
+  > **Note:** Snap doesn't work over _IITB-Wireless_, you will need personal hotspot for this to work. [Standalone installation](https://micro-xrce-dds.docs.eprosima.com/en/latest/installation.html) is possible without using Snap
 - **Python dependencies**:
   ```bash
   pip install -r requirements.txt
@@ -30,12 +31,13 @@ git checkout main
 ### PX4 Autopilot
 Run the PX4 setup script:
 ```bash
-bash ./PX4-Autopilot/Tools/setup/ubuntu.sh
+bash ./PX4-Autopilot-ADS/Tools/setup/ubuntu.sh
 ```
 
 ### Build & Launch the Simulator
 To build and launch the Gazebo-based anti-drone simulation:
 ```bash
+cd PX4-Autopilot-ADS
 make px4_sitl_antidrone gz_x500
 ```
 
@@ -43,7 +45,9 @@ make px4_sitl_antidrone gz_x500
 
 1. **Start the Micro XRCE-DDS Agent** (in a separate terminal):
    ```bash
-   micro-xrce-dds-agent udp4 -p 8888
+   MicroXRCEAgent udp4 -p 8888 # For manual installation
+   # or
+   micro-xrce-dds-agent udp4 -p 8888 # For snap installation
    ```
    [Micro XRCE-DDS documentation](https://micro-xrce-dds.docs.eprosima.com/en/latest/introduction.html)
 
@@ -53,25 +57,32 @@ make px4_sitl_antidrone gz_x500
    colcon build --symlink-install
    source install/setup.bash
    ```
-
+3. **Listen to topics on terminal**
+   ```bash
+   ros2 topic echo 
+   ```
 3. **Run a ROS 2 node** (example):
    ```bash
    ros2 run px4_ros_com sensor_combined_listener
    ```
+   > **Note:** _px4_msgs_ package takes time to build(~4min)
+
    > **Note:** Make sure you have sourced the ROS 2 overlay:
    > ```bash
    > source /opt/ros/$ROS_DISTRO/setup.bash
    > ```
-
+## Simulation Environment
+1. To change IMU frequency, make changes in the following files
+   > src/modules/sensors/vehicle_imu/imu_parameters.c
+   > Tools/simulation/gz/models/x500_base/model.sdf
+   > ROMFS/px4fmu_common/init.d-posix/px4-rc.simulator
+2. The frequency must be a multiple of the step size in the world.sdf
+   > Tools/simulation/gz/worlds/default.sdf
 ## Additional Resources
 - [PX4 Documentation](https://docs.px4.io/)
 - [Gazebo Documentation](https://gazebosim.org/)
 - [ROS 2 Documentation](https://docs.ros.org/)
 
 ---
-
-For questions, issues, or contributions, please open an issue or pull request on GitHub. Happy flying!
-
-
 
 
