@@ -71,13 +71,15 @@ make px4_sitl_antidrone gz_x500
    > ```bash
    > source /opt/ros/$ROS_DISTRO/setup.bash
    > ```
-## Simulation Environment
-1. To change IMU frequency, make changes in the following files
-   > src/modules/sensors/vehicle_imu/imu_parameters.c
-   > Tools/simulation/gz/models/x500_base/model.sdf
-   > ROMFS/px4fmu_common/init.d-posix/px4-rc.simulator
-2. The frequency must be a multiple of the step size in the world.sdf
-   > Tools/simulation/gz/worlds/default.sdf
+## Simulation Configuration
+
+### IMU Frequency Modification
+To change IMU frequency, modify these files:
+- `src/modules/sensors/vehicle_imu/imu_parameters.c`
+- `Tools/simulation/gz/models/x500_base/model.sdf`
+- `ROMFS/px4fmu_common/init.d-posix/px4-rc.simulator`
+
+> **Note:** IMU frequency must be a multiple of the step size in `Tools/simulation/gz/worlds/default.sdf`
 ## Additional Resources
 - [PX4 Documentation](https://docs.px4.io/)
 - [Gazebo Documentation](https://gazebosim.org/)
