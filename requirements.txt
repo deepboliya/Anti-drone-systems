@@ -1,0 +1,6 @@
+mavsdk
+numpy
+empy
+pyros-genmsg
+setuptools
+
