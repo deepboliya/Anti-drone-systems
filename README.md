@@ -13,7 +13,7 @@ git checkout main
 ```
 
 ### 2. Prerequisites
-- **PX4 Autopilot dependencies**: See [PX4 Dev Guide](https://docs.px4.io/main/en/dev_setup/dev_env_linux_ubuntu.html)
+<!-- - **PX4 Autopilot dependencies**: See [PX4 Dev Guide](https://docs.px4.io/main/en/dev_setup/dev_env_linux_ubuntu.html) -->
 - **Gazebo Harmonic (Recommended)**: Required for SITL simulation. [Install here](https://gazebosim.org/docs/harmonic/install_ubuntu). _Do not install both Gazebo Harmonic and Gazebo Classic on the same system, as this can cause conflicts._
 - **ROS 2** (for integration): Make sure you have a working ROS 2 installation
 - **Micro XRCE-DDS Agent** (for ROS2-uORB bridge):
