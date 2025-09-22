@@ -3,4 +3,8 @@ numpy
 empy
 pyros-genmsg
 setuptools
+pygame
+matplotlib
+scipy
+pandas
 
