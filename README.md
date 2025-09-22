@@ -1,4 +1,4 @@
-# Anti-Drone Project
+# Swarm Robotics - ADS
 
 This repository provides a simulation and development environment for the anti-drone research, using PX4 Autopilot, ROS 2, and Gazebo
 
@@ -7,7 +7,7 @@ This repository provides a simulation and development environment for the anti-d
 ### 1. Clone the Repository
 Clone with all submodules:
 ```bash
-git clone https://github.com/deepboliya/Anti-drone-systems.git --recurse-submodules
+git clone https://github.com/deepboliya/Swarm-robotics.git --recurse-submodules
 cd PX4-Autopilot-ADS
 git checkout main
 ```
