@@ -8,9 +8,15 @@ This repository provides a simulation and development environment for the anti-d
 Clone with all submodules:
 ```bash
 git clone https://github.com/deepboliya/Swarm-robotics.git --recurse-submodules
-cd PX4-Autopilot-ADS
-git checkout main
+cd Swarm-robotics
 ```
+>**Note** - To get out of the detached HEAD of PX4-Autopilot
+>```bash
+>cd PX4-Autopilot-ADS
+># All latest developments in custom_controllers branch(not main)
+>git checkout custom_controllers
+>cd ..
+>```
 
 ### 2. Prerequisites
 <!-- - **PX4 Autopilot dependencies**: See [PX4 Dev Guide](https://docs.px4.io/main/en/dev_setup/dev_env_linux_ubuntu.html) -->
